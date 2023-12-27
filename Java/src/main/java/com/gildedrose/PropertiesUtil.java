@@ -1,7 +1,7 @@
 package com.gildedrose;
 
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
+import java.util.Properties;
 
 public class PropertiesUtil {
 
@@ -18,5 +18,9 @@ public class PropertiesUtil {
 
     public static int getIntProperty(String key, int defaultValue) {
         return Integer.parseInt(properties.getProperty(key, String.valueOf(defaultValue)));
+    }
+
+    public static String getStringProperty(String key, String defaultValue) {
+        return properties.getProperty(key, defaultValue);
     }
 }
